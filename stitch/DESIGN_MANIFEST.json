@@ -1,0 +1,46 @@
+[
+  {
+    "screenId": "cc503afeaa96445f9ed8c6d4cf5384d5",
+    "title": "Record Editor - Runtime Ping",
+    "htmlFile": "cc503afeaa96445f9ed8c6d4cf5384d5.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2Q1OGI2MDIxOTAyZjQzMjc5MzFkMjhjNTQxMDUzOGExEgsSBxCN19Wi9xcYAZIBIwoKcHJvamVjdF9pZBIVQhM1NTg1ODQ0ODA3Mjk4MDM1NTY0&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/runtime-ping-98a3b6cb/stitch/cc503afeaa96445f9ed8c6d4cf5384d5.html",
+    "surfaceIds": [
+      "SURF_RECORD_EDITOR"
+    ]
+  },
+  {
+    "screenId": "9892da7f9f834c78b7f001fdad1aade4",
+    "title": "Insights - Runtime Ping",
+    "htmlFile": "9892da7f9f834c78b7f001fdad1aade4.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzE4YjllY2Y1ZDY1NzQ0NzU4MTg3ZDEwYmU5ODE1Y2I3EgsSBxCN19Wi9xcYAZIBIwoKcHJvamVjdF9pZBIVQhM1NTg1ODQ0ODA3Mjk4MDM1NTY0&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/runtime-ping-98a3b6cb/stitch/9892da7f9f834c78b7f001fdad1aade4.html",
+    "surfaceIds": [
+      "SURF_INSIGHTS"
+    ]
+  },
+  {
+    "screenId": "e652d07fdef04b4c8ef2044ca23cdbcc",
+    "title": "Record Operations - Runtime Ping",
+    "htmlFile": "e652d07fdef04b4c8ef2044ca23cdbcc.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2U5MzIyMDE4YWIwNDQwZTk5Yzg0NTQ5ZTYwYzRkMTcwEgsSBxCN19Wi9xcYAZIBIwoKcHJvamVjdF9pZBIVQhM1NTg1ODQ0ODA3Mjk4MDM1NTY0&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/runtime-ping-98a3b6cb/stitch/e652d07fdef04b4c8ef2044ca23cdbcc.html",
+    "surfaceIds": [
+      "SURF_RECORD_OPERATIONS"
+    ]
+  },
+  {
+    "screenId": "25b673fa21f24267bfa7f14376c3c6f9",
+    "title": "Pipeline Board - Runtime Ping",
+    "htmlFile": "25b673fa21f24267bfa7f14376c3c6f9.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzQxMmM3ZWVhMzI1NjQ2MWQ4ZTgxNzBiYmYxNWY4MmJlEgsSBxCN19Wi9xcYAZIBIwoKcHJvamVjdF9pZBIVQhM1NTg1ODQ0ODA3Mjk4MDM1NTY0&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/runtime-ping-98a3b6cb/stitch/25b673fa21f24267bfa7f14376c3c6f9.html",
+    "surfaceIds": [
+      "SURF_PIPELINE_BOARD"
+    ]
+  }
+]

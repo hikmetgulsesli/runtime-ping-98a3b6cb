@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Runtime Ping - Operations</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;800&amp;family=Inter:wght@400;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c6c6cd",
+                    "secondary": "#505f76",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#dec29a",
+                    "surface-dim": "#dcd9db",
+                    "surface-variant": "#e4e2e4",
+                    "primary-fixed-dim": "#bec6e0",
+                    "secondary-container": "#d0e1fb",
+                    "surface-container-low": "#f6f3f5",
+                    "surface-bright": "#fcf8fa",
+                    "inverse-on-surface": "#f3f0f2",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "secondary-fixed-dim": "#b7c8e1",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#45464d",
+                    "tertiary-fixed": "#fcdeb5",
+                    "on-primary": "#ffffff",
+                    "background": "#fcf8fa",
+                    "error-container": "#ffdad6",
+                    "surface": "#fcf8fa",
+                    "inverse-surface": "#303032",
+                    "on-secondary-container": "#54647a",
+                    "primary-container": "#131b2e",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#1b1b1d",
+                    "secondary-fixed": "#d3e4fe",
+                    "tertiary": "#000000",
+                    "on-tertiary-container": "#98805d",
+                    "primary-fixed": "#dae2fd",
+                    "surface-container": "#f0edef",
+                    "surface-tint": "#565e74",
+                    "on-primary-fixed": "#131b2e",
+                    "on-secondary-fixed": "#0b1c30",
+                    "tertiary-container": "#271901",
+                    "primary": "#000000",
+                    "on-surface": "#1b1b1d",
+                    "on-tertiary-fixed-variant": "#574425",
+                    "outline": "#76777d",
+                    "on-primary-container": "#7c839b",
+                    "surface-container-highest": "#e4e2e4",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#271901",
+                    "inverse-primary": "#bec6e0",
+                    "surface-container-high": "#eae7e9",
+                    "on-secondary-fixed-variant": "#38485d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xs": "0.25rem",
+                    "margin-desktop": "1.5rem",
+                    "base": "4px",
+                    "xl": "2rem",
+                    "margin-mobile": "1rem",
+                    "md": "1rem",
+                    "lg": "1.5rem",
+                    "gutter": "1rem",
+                    "sm": "0.5rem"
+            },
+            "fontFamily": {
+                    "headline-lg": [
+                            "Geist"
+                    ],
+                    "label-mono": [
+                            "JetBrains Mono"
+                    ],
+                    "headline-md": [
+                            "Geist"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "body-sm": [
+                            "Inter"
+                    ],
+                    "label-caps": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "headline-lg": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-mono": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-md": [
+                            "18px",
+                            {
+                                    "lineHeight": "24px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-sm": [
+                            "13px",
+                            {
+                                    "lineHeight": "18px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-caps": [
+                            "11px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "700"
+                            }
+                    ]
+            }
+        },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-16">
+<div class="flex items-center gap-lg">
+<div class="font-headline-lg text-headline-lg font-black text-primary dark:text-inverse-primary tracking-tight">Runtime Ping</div>
+<div class="relative hidden md:block w-64 ml-md">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input aria-label="ACT_SEARCH_RECORDS" class="w-full pl-lg py-[6px] bg-surface-container-low border border-outline-variant rounded-DEFAULT font-body-sm text-body-sm focus:outline-none focus:border-primary focus:border-2 focus:py-[5px] transition-all" placeholder="Search resources..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<button class="p-xs text-secondary hover:bg-surface-container-low dark:hover:bg-primary-container transition-colors rounded-DEFAULT cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-xs text-secondary hover:bg-surface-container-low dark:hover:bg-primary-container transition-colors rounded-DEFAULT cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<img alt="User profile" class="w-8 h-8 rounded-full border border-outline-variant ml-sm object-cover" data-alt="A small, professional headshot of an engineer in a brightly lit office setting. The lighting is soft and neutral, fitting a corporate or tech environment. High resolution, clear focus, minimal background distractions." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWRp90SyPSgBvNBhXOk8HhAfLkNDl58ys5y3Mzozu2UyLuE5-gPKh6mfp7NR3bSvtolIjTRpdTyP97ju0RCbX48mn7oMxy5unEVIrOcj7-gTjFNGA6SR1RrGB2T0y_Ng50IoA5xk9ZRZ_BRrfXKWuqs_YnUY9HwObd7pLxWW4bHpBsmuhM57bHtH0jbXc0JIUmLbEuVQA_Jo8bttqaW0ZyJESgSBb5iTavA0zjN7Qej3YNkk7A0cbP2keJ-8_nSynFriVgmE7bfrM"/>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col pt-md pb-xl bg-surface-container-low dark:bg-surface-container-lowest border-r border-outline-variant dark:border-outline fixed left-0 top-16 h-full w-[240px] z-40">
+<div class="px-md mb-lg">
+<div class="flex items-center gap-sm mb-sm">
+<div class="w-8 h-8 rounded-DEFAULT bg-emerald-50 border border-emerald-200 flex items-center justify-center">
+<span class="material-symbols-outlined text-emerald-700 text-[18px]">check_circle</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md font-bold text-on-surface">System Health</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">All systems operational</div>
+</div>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-xs px-sm">
+<a class="bg-primary-container dark:bg-secondary-container text-on-primary-container dark:text-on-secondary-container border-l-2 border-primary font-bold flex items-center gap-sm px-sm py-[6px] rounded-r-DEFAULT duration-200 ease-in-out cursor-pointer" href="#">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">Operations</span>
+</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:bg-surface-container-highest dark:hover:bg-secondary-fixed transition-all flex items-center gap-sm px-sm py-[6px] border-l-2 border-transparent rounded-r-DEFAULT duration-200 ease-in-out cursor-pointer" href="#">
+<span class="material-symbols-outlined text-[18px]">account_tree</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">Pipeline</span>
+</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:bg-surface-container-highest dark:hover:bg-secondary-fixed transition-all flex items-center gap-sm px-sm py-[6px] border-l-2 border-transparent rounded-r-DEFAULT duration-200 ease-in-out cursor-pointer" href="#">
+<span class="material-symbols-outlined text-[18px]">insights</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">Insights</span>
+</a>
+</nav>
+<div class="mt-auto flex flex-col gap-xs px-sm">
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:bg-surface-container-highest dark:hover:bg-secondary-fixed transition-all flex items-center gap-sm px-sm py-[6px] rounded-DEFAULT duration-200 ease-in-out cursor-pointer" href="#">
+<span class="material-symbols-outlined text-[18px]">help</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">Documentation</span>
+</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:bg-surface-container-highest dark:hover:bg-secondary-fixed transition-all flex items-center gap-sm px-sm py-[6px] rounded-DEFAULT duration-200 ease-in-out cursor-pointer" href="#">
+<span class="material-symbols-outlined text-[18px]">contact_support</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">Support</span>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="md:pl-[240px] pt-16 min-h-screen">
+<div class="p-margin-desktop max-w-[1600px] mx-auto">
+<!-- Header & Actions -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-md mb-lg">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-xs">Operations Ledger</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Monitor and manage runtime records across all clusters.</p>
+</div>
+<div class="flex items-center gap-sm">
+<button aria-label="ACT_RETRY_LOAD" class="h-8 px-md bg-surface-container-lowest border border-outline-variant text-on-surface font-body-sm text-body-sm rounded-DEFAULT flex items-center gap-xs hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+                        Refresh
+                    </button>
+<button aria-label="ACT_CREATE_RECORD" class="h-8 px-md bg-primary text-on-primary font-body-sm text-body-sm rounded-DEFAULT flex items-center gap-xs hover:bg-surface-tint transition-colors">
+<span class="material-symbols-outlined text-[16px]">add</span>
+                        Create Record
+                    </button>
+</div>
+</div>
+<!-- Summary Metrics Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md mb-lg">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT p-md flex flex-col justify-between">
+<div class="flex items-center justify-between mb-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Total Records</span>
+<span class="material-symbols-outlined text-outline text-[18px]">database</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface">1,248,392</div>
+<div class="font-body-sm text-body-sm text-secondary mt-xs flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> 2.4% vs last week
+                    </div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT p-md flex flex-col justify-between">
+<div class="flex items-center justify-between mb-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Active Streams</span>
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">stream</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface">843</div>
+<div class="font-body-sm text-body-sm text-secondary mt-xs flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px] text-emerald-600">check_circle</span> All healthy
+                    </div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT p-md flex flex-col justify-between">
+<div class="flex items-center justify-between mb-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Failed Operations</span>
+<span class="material-symbols-outlined text-error text-[18px]">error</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface">12</div>
+<div class="font-body-sm text-body-sm text-secondary mt-xs flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px] text-error">warning</span> Requires attention
+                    </div>
+</div>
+</div>
+<!-- Main Data Area (Table + Preview) -->
+<div class="flex flex-col lg:flex-row gap-md">
+<!-- Table Container -->
+<div class="flex-1 bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden flex flex-col">
+<!-- Table Toolbar -->
+<div class="p-sm border-b border-outline-variant flex items-center justify-between bg-surface">
+<div class="flex items-center gap-sm">
+<select class="h-7 px-sm py-0 bg-surface-container-low border border-outline-variant rounded-DEFAULT font-body-sm text-body-sm focus:outline-none focus:border-primary">
+<option>Status: All</option>
+<option>Active</option>
+<option>Failed</option>
+<option>Pending</option>
+</select>
+<select class="h-7 px-sm py-0 bg-surface-container-low border border-outline-variant rounded-DEFAULT font-body-sm text-body-sm focus:outline-none focus:border-primary">
+<option>Time: Last 24h</option>
+<option>Last 7 days</option>
+<option>Last 30 days</option>
+</select>
+</div>
+<div class="relative w-48">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline text-[16px]">filter_list</span>
+<input class="w-full h-7 pl-lg pr-sm py-0 bg-surface-container-low border border-outline-variant rounded-DEFAULT font-body-sm text-body-sm focus:outline-none focus:border-primary focus:border-2 transition-all" placeholder="Filter..." type="text"/>
+</div>
+</div>
+<!-- Table -->
+<div class="overflow-x-auto flex-1">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant">
+<th class="p-sm font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider font-semibold w-12 text-center">
+<input class="rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+</th>
+<th class="p-sm font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider font-semibold">Record ID</th>
+<th class="p-sm font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider font-semibold">Name / Origin</th>
+<th class="p-sm font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider font-semibold">Status</th>
+<th class="p-sm font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider font-semibold">Last Ping</th>
+<th class="p-sm font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm">
+<!-- Row 1 - Selected -->
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors bg-surface-container-lowest cursor-pointer border-l-2 !border-l-primary" onclick="/* ACT_SELECT_RECORD */">
+<td class="p-sm text-center">
+<input checked="" class="rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+</td>
+<td class="p-sm font-label-mono text-label-mono text-secondary">REC-8924-A</td>
+<td class="p-sm">
+<div class="font-medium text-on-surface">us-east-1-cluster-alpha</div>
+<div class="text-secondary text-[11px]">AWS / Production</div>
+</td>
+<td class="p-sm">
+<span class="inline-flex items-center px-[6px] py-[2px] rounded-DEFAULT bg-emerald-50 text-emerald-700 font-label-caps text-label-caps border border-emerald-100 uppercase">Active</span>
+</td>
+<td class="p-sm font-label-mono text-label-mono text-secondary">12s ago</td>
+<td class="p-sm text-right">
+<button class="p-xs text-secondary hover:text-on-surface"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors bg-surface-container-lowest cursor-pointer border-l-2 border-l-transparent">
+<td class="p-sm text-center">
+<input class="rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+</td>
+<td class="p-sm font-label-mono text-label-mono text-secondary">REC-8923-F</td>
+<td class="p-sm">
+<div class="font-medium text-on-surface">eu-west-db-replica-2</div>
+<div class="text-secondary text-[11px]">GCP / Staging</div>
+</td>
+<td class="p-sm">
+<span class="inline-flex items-center px-[6px] py-[2px] rounded-DEFAULT bg-amber-50 text-amber-700 font-label-caps text-label-caps border border-amber-100 uppercase">Warning</span>
+</td>
+<td class="p-sm font-label-mono text-label-mono text-secondary">1m 14s ago</td>
+<td class="p-sm text-right">
+<button class="p-xs text-secondary hover:text-on-surface"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors bg-surface-container-lowest cursor-pointer border-l-2 border-l-transparent">
+<td class="p-sm text-center">
+<input class="rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+</td>
+<td class="p-sm font-label-mono text-label-mono text-secondary">REC-8922-E</td>
+<td class="p-sm">
+<div class="font-medium text-on-surface">ap-south-cache-node</div>
+<div class="text-secondary text-[11px]">Azure / Development</div>
+</td>
+<td class="p-sm">
+<span class="inline-flex items-center px-[6px] py-[2px] rounded-DEFAULT bg-red-50 text-red-700 font-label-caps text-label-caps border border-red-100 uppercase">Failed</span>
+</td>
+<td class="p-sm font-label-mono text-label-mono text-secondary">4m 02s ago</td>
+<td class="p-sm text-right">
+<button class="p-xs text-secondary hover:text-on-surface"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors bg-surface-container-lowest cursor-pointer border-l-2 border-l-transparent">
+<td class="p-sm text-center">
+<input class="rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+</td>
+<td class="p-sm font-label-mono text-label-mono text-secondary">REC-8921-A</td>
+<td class="p-sm">
+<div class="font-medium text-on-surface">us-west-2-worker-pool</div>
+<div class="text-secondary text-[11px]">AWS / Production</div>
+</td>
+<td class="p-sm">
+<span class="inline-flex items-center px-[6px] py-[2px] rounded-DEFAULT bg-emerald-50 text-emerald-700 font-label-caps text-label-caps border border-emerald-100 uppercase">Active</span>
+</td>
+<td class="p-sm font-label-mono text-label-mono text-secondary">45s ago</td>
+<td class="p-sm text-right">
+<button class="p-xs text-secondary hover:text-on-surface"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Preview Panel -->
+<aside class="w-full lg:w-[320px] shrink-0 bg-surface-container-lowest border border-outline-variant rounded-DEFAULT flex flex-col h-[500px]">
+<div class="p-sm border-b border-outline-variant flex items-center justify-between bg-surface">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider font-semibold">Record Details</span>
+<button class="p-xs text-secondary hover:text-on-surface"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</div>
+<div class="p-md overflow-y-auto flex-1">
+<div class="flex items-center gap-sm mb-md">
+<div class="w-10 h-10 rounded-DEFAULT bg-surface-container-low border border-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px]">dns</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">us-east-1-cluster-alpha</h3>
+<p class="font-label-mono text-label-mono text-secondary">REC-8924-A</p>
+</div>
+</div>
+<div class="mb-md">
+<span class="inline-flex items-center px-[6px] py-[2px] rounded-DEFAULT bg-emerald-50 text-emerald-700 font-label-caps text-label-caps border border-emerald-100 uppercase mb-xs">Active</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Last ping received 12 seconds ago. Latency within normal parameters (42ms).</p>
+</div>
+<hr class="border-outline-variant my-md"/>
+<div class="space-y-sm">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Environment</span>
+<span class="font-body-sm text-body-sm text-on-surface">AWS / Production</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary uppercase">IP Address</span>
+<span class="font-label-mono text-label-mono text-on-surface">10.0.124.88</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Region</span>
+<span class="font-body-sm text-body-sm text-on-surface">us-east-1 (N. Virginia)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Uptime</span>
+<span class="font-body-sm text-body-sm text-on-surface">45 days, 12:04:22</span>
+</div>
+</div>
+<hr class="border-outline-variant my-md"/>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary uppercase mb-xs">Recent Telemetry</span>
+<div class="bg-surface-container-low rounded-DEFAULT p-sm font-label-mono text-label-mono text-on-surface text-[10px] whitespace-pre-wrap border border-outline-variant">{"cpu": "12%", "mem": "4.2GB", "net_tx": "1.2MB/s"}</div>
+</div>
+</div>
+<div class="p-sm border-t border-outline-variant bg-surface-container-low flex gap-sm">
+<button class="flex-1 h-8 bg-surface-container-lowest border border-outline-variant text-on-surface font-body-sm text-body-sm rounded-DEFAULT flex items-center justify-center gap-xs hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit</span> Edit
+                        </button>
+<button class="flex-1 h-8 bg-surface-container-lowest border border-outline-variant text-on-surface font-body-sm text-body-sm rounded-DEFAULT flex items-center justify-center gap-xs hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[16px]">terminal</span> Shell
+                        </button>
+</div>
+</aside>
+</div>
+</div>
+</main>
+</body></html>

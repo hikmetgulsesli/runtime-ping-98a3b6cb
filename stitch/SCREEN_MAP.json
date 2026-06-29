@@ -1,0 +1,38 @@
+[
+  {
+    "screenId": "cc503afeaa96445f9ed8c6d4cf5384d5",
+    "name": "Record Editor - Runtime Ping",
+    "type": "form",
+    "description": "Record Editor - Runtime Ping screen",
+    "surfaceIds": [
+      "SURF_RECORD_EDITOR"
+    ]
+  },
+  {
+    "screenId": "9892da7f9f834c78b7f001fdad1aade4",
+    "name": "Insights - Runtime Ping",
+    "type": "app-screen",
+    "description": "Insights - Runtime Ping screen",
+    "surfaceIds": [
+      "SURF_INSIGHTS"
+    ]
+  },
+  {
+    "screenId": "e652d07fdef04b4c8ef2044ca23cdbcc",
+    "name": "Record Operations - Runtime Ping",
+    "type": "app-screen",
+    "description": "Record Operations - Runtime Ping screen",
+    "surfaceIds": [
+      "SURF_RECORD_OPERATIONS"
+    ]
+  },
+  {
+    "screenId": "25b673fa21f24267bfa7f14376c3c6f9",
+    "name": "Pipeline Board - Runtime Ping",
+    "type": "app-screen",
+    "description": "Pipeline Board - Runtime Ping screen",
+    "surfaceIds": [
+      "SURF_PIPELINE_BOARD"
+    ]
+  }
+]
