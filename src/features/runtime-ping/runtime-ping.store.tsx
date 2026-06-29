@@ -95,9 +95,11 @@ export function runtimePingReducer(
       };
     case 'BOOTSTRAP_SUCCESS': {
       const records = action.payload.records;
+      const restoredScreen = action.payload.preferences?.activeScreen ?? DEFAULT_SCREEN;
+      const activeScreen = restoredScreen === 'record-editor' ? DEFAULT_SCREEN : restoredScreen;
       return {
         ...state,
-        activeScreen: action.payload.preferences?.activeScreen ?? DEFAULT_SCREEN,
+        activeScreen,
         activePanel: action.payload.preferences?.activePanel ?? DEFAULT_PANEL,
         records,
         counts: deriveCounts(records),

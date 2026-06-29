@@ -70,10 +70,31 @@ function AppContent() {
 
   useEffect(() => {
     if (state.storageStatus === 'ready') {
-      savePreferences({ activeScreen: state.activeScreen, activePanel: state.activePanel });
-      saveRecords(state.records);
+      const prefResult = savePreferences({ activeScreen: state.activeScreen, activePanel: state.activePanel });
+      const recResult = saveRecords(state.records);
+
+      if (prefResult.status === 'error' || recResult.status === 'error') {
+        dispatch({
+          type: 'SET_STORAGE_STATUS',
+          payload: {
+            status: 'error',
+            error: prefResult.error ?? recResult.error ?? 'Failed to save data',
+          },
+        });
+      }
     }
-  }, [state.activeScreen, state.activePanel, state.records, state.storageStatus]);
+  }, [state.activeScreen, state.activePanel, state.records, state.storageStatus, dispatch]);
+
+  useEffect(() => {
+    if (state.activeScreen === 'record-editor' && state.selectedRecord) {
+      const nameInput = document.getElementById('record_name') as HTMLInputElement | null;
+      const urlInput = document.getElementById('endpoint_url') as HTMLInputElement | null;
+      const descInput = document.getElementById('description') as HTMLTextAreaElement | null;
+      if (nameInput) nameInput.value = state.selectedRecord.title;
+      if (urlInput) urlInput.value = state.selectedRecord.url;
+      if (descInput) descInput.value = state.selectedRecord.description;
+    }
+  }, [state.activeScreen, state.selectedRecord]);
 
   const commonNavigationActions = {
     'operations-1': () => actions.navigate('record-operations'),
@@ -161,35 +182,36 @@ function AppContent() {
         />
       )}
 
-      {state.activeScreen === 'record-editor' && (
-        <RecordEditorRuntimePing
-          actions={{
-            'cancel-1': actions.closeEditor,
-            'save-changes-2': () => {
-              if (state.selectedRecord) {
-                actions.saveRecord({
-                  ...state.selectedRecord,
-                  updatedAt: new Date().toISOString(),
-                });
-              }
-              actions.closeEditor();
-            },
-            'close-3': actions.closeEditor,
-            'close-4': actions.closeEditor,
-            'cancel-5': actions.closeEditor,
-            'save-changes-6': () => {
-              if (state.selectedRecord) {
-                actions.saveRecord({
-                  ...state.selectedRecord,
-                  updatedAt: new Date().toISOString(),
-                });
-              }
-              actions.closeEditor();
-            },
-            'back-to-operations-1': () => actions.navigate('record-operations'),
-          }}
-        />
-      )}
+      {state.activeScreen === 'record-editor' && (() => {
+        const handleSaveChanges = () => {
+          if (state.selectedRecord) {
+            const nameInput = document.getElementById('record_name') as HTMLInputElement | null;
+            const urlInput = document.getElementById('endpoint_url') as HTMLInputElement | null;
+            const descInput = document.getElementById('description') as HTMLTextAreaElement | null;
+            actions.saveRecord({
+              ...state.selectedRecord,
+              title: nameInput?.value ?? state.selectedRecord.title,
+              url: urlInput?.value ?? state.selectedRecord.url,
+              description: descInput?.value ?? state.selectedRecord.description,
+              updatedAt: new Date().toISOString(),
+            });
+          }
+          actions.closeEditor();
+        };
+        return (
+          <RecordEditorRuntimePing
+            actions={{
+              'cancel-1': actions.closeEditor,
+              'save-changes-2': handleSaveChanges,
+              'close-3': () => {},
+              'close-4': () => {},
+              'cancel-5': actions.closeEditor,
+              'save-changes-6': handleSaveChanges,
+              'back-to-operations-1': () => actions.navigate('record-operations'),
+            }}
+          />
+        );
+      })()}
     </div>
   );
 }
