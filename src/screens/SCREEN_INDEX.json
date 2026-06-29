@@ -1,0 +1,327 @@
+[
+  {
+    "screenId": "cc503afeaa96445f9ed8c6d4cf5384d5",
+    "title": "Record Editor - Runtime Ping",
+    "componentName": "RecordEditorRuntimePing",
+    "file": "src/screens/RecordEditorRuntimePing.tsx",
+    "buttons": 6,
+    "inputs": 3,
+    "links": 1,
+    "actions": [
+      {
+        "id": "cancel-1",
+        "kind": "button",
+        "label": "Cancel",
+        "index": 0
+      },
+      {
+        "id": "save-changes-2",
+        "kind": "button",
+        "label": "Save Changes",
+        "index": 1
+      },
+      {
+        "id": "close-3",
+        "kind": "button",
+        "label": "Close",
+        "index": 2
+      },
+      {
+        "id": "close-4",
+        "kind": "button",
+        "label": "Close",
+        "index": 3
+      },
+      {
+        "id": "cancel-5",
+        "kind": "button",
+        "label": "Cancel",
+        "index": 4
+      },
+      {
+        "id": "save-changes-6",
+        "kind": "button",
+        "label": "Save Changes",
+        "index": 5
+      },
+      {
+        "id": "back-to-operations-1",
+        "kind": "link",
+        "label": "Back to Operations",
+        "href": "#",
+        "index": 0
+      }
+    ]
+  },
+  {
+    "screenId": "9892da7f9f834c78b7f001fdad1aade4",
+    "title": "Insights - Runtime Ping",
+    "componentName": "InsightsRuntimePing",
+    "file": "src/screens/InsightsRuntimePing.tsx",
+    "buttons": 2,
+    "inputs": 0,
+    "links": 6,
+    "actions": [
+      {
+        "id": "menu-1",
+        "kind": "button",
+        "label": "Menu",
+        "index": 0
+      },
+      {
+        "id": "export-2",
+        "kind": "button",
+        "label": "Export",
+        "index": 1
+      },
+      {
+        "id": "operations-1",
+        "kind": "link",
+        "label": "Operations",
+        "href": "#",
+        "index": 0
+      },
+      {
+        "id": "pipeline-2",
+        "kind": "link",
+        "label": "Pipeline",
+        "href": "#",
+        "index": 1
+      },
+      {
+        "id": "insights-3",
+        "kind": "link",
+        "label": "Insights",
+        "href": "#",
+        "index": 2
+      },
+      {
+        "id": "documentation-4",
+        "kind": "link",
+        "label": "Documentation",
+        "href": "#",
+        "index": 3
+      },
+      {
+        "id": "support-5",
+        "kind": "link",
+        "label": "Support",
+        "href": "#",
+        "index": 4
+      },
+      {
+        "id": "investigate-traces-6",
+        "kind": "link",
+        "label": "Investigate traces",
+        "href": "#",
+        "index": 5
+      }
+    ]
+  },
+  {
+    "screenId": "e652d07fdef04b4c8ef2044ca23cdbcc",
+    "title": "Record Operations - Runtime Ping",
+    "componentName": "RecordOperationsRuntimePing",
+    "file": "src/screens/RecordOperationsRuntimePing.tsx",
+    "buttons": 11,
+    "inputs": 7,
+    "links": 5,
+    "actions": [
+      {
+        "id": "notifications-1",
+        "kind": "button",
+        "label": "Notifications",
+        "index": 0
+      },
+      {
+        "id": "settings-2",
+        "kind": "button",
+        "label": "Settings",
+        "index": 1
+      },
+      {
+        "id": "act-retry-load-3",
+        "kind": "button",
+        "label": "ACT_RETRY_LOAD",
+        "index": 2
+      },
+      {
+        "id": "act-create-record-4",
+        "kind": "button",
+        "label": "ACT_CREATE_RECORD",
+        "index": 3
+      },
+      {
+        "id": "more-vert-5",
+        "kind": "button",
+        "label": "More Vert",
+        "index": 4
+      },
+      {
+        "id": "more-vert-6",
+        "kind": "button",
+        "label": "More Vert",
+        "index": 5
+      },
+      {
+        "id": "more-vert-7",
+        "kind": "button",
+        "label": "More Vert",
+        "index": 6
+      },
+      {
+        "id": "more-vert-8",
+        "kind": "button",
+        "label": "More Vert",
+        "index": 7
+      },
+      {
+        "id": "close-9",
+        "kind": "button",
+        "label": "Close",
+        "index": 8
+      },
+      {
+        "id": "edit-10",
+        "kind": "button",
+        "label": "Edit",
+        "index": 9
+      },
+      {
+        "id": "shell-11",
+        "kind": "button",
+        "label": "Shell",
+        "index": 10
+      },
+      {
+        "id": "operations-1",
+        "kind": "link",
+        "label": "Operations",
+        "href": "#",
+        "index": 0
+      },
+      {
+        "id": "pipeline-2",
+        "kind": "link",
+        "label": "Pipeline",
+        "href": "#",
+        "index": 1
+      },
+      {
+        "id": "insights-3",
+        "kind": "link",
+        "label": "Insights",
+        "href": "#",
+        "index": 2
+      },
+      {
+        "id": "documentation-4",
+        "kind": "link",
+        "label": "Documentation",
+        "href": "#",
+        "index": 3
+      },
+      {
+        "id": "support-5",
+        "kind": "link",
+        "label": "Support",
+        "href": "#",
+        "index": 4
+      }
+    ]
+  },
+  {
+    "screenId": "25b673fa21f24267bfa7f14376c3c6f9",
+    "title": "Pipeline Board - Runtime Ping",
+    "componentName": "PipelineBoardRuntimePing",
+    "file": "src/screens/PipelineBoardRuntimePing.tsx",
+    "buttons": 8,
+    "inputs": 1,
+    "links": 5,
+    "actions": [
+      {
+        "id": "notifications-1",
+        "kind": "button",
+        "label": "Notifications",
+        "index": 0
+      },
+      {
+        "id": "settings-2",
+        "kind": "button",
+        "label": "Settings",
+        "index": 1
+      },
+      {
+        "id": "filter-3",
+        "kind": "button",
+        "label": "Filter",
+        "index": 2
+      },
+      {
+        "id": "new-record-4",
+        "kind": "button",
+        "label": "New Record",
+        "index": 3
+      },
+      {
+        "id": "more-horiz-5",
+        "kind": "button",
+        "label": "More Horiz",
+        "index": 4
+      },
+      {
+        "id": "more-horiz-6",
+        "kind": "button",
+        "label": "More Horiz",
+        "index": 5
+      },
+      {
+        "id": "more-horiz-7",
+        "kind": "button",
+        "label": "More Horiz",
+        "index": 6
+      },
+      {
+        "id": "more-horiz-8",
+        "kind": "button",
+        "label": "More Horiz",
+        "index": 7
+      },
+      {
+        "id": "operations-1",
+        "kind": "link",
+        "label": "Operations",
+        "href": "#",
+        "index": 0
+      },
+      {
+        "id": "pipeline-2",
+        "kind": "link",
+        "label": "Pipeline",
+        "href": "#",
+        "index": 1
+      },
+      {
+        "id": "insights-3",
+        "kind": "link",
+        "label": "Insights",
+        "href": "#",
+        "index": 2
+      },
+      {
+        "id": "documentation-4",
+        "kind": "link",
+        "label": "Documentation",
+        "href": "#",
+        "index": 3
+      },
+      {
+        "id": "support-5",
+        "kind": "link",
+        "label": "Support",
+        "href": "#",
+        "index": 4
+      }
+    ]
+  }
+]
