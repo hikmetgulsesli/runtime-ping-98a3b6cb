@@ -1,0 +1,749 @@
+[
+  {
+    "screenId": "cc503afeaa96445f9ed8c6d4cf5384d5",
+    "screenTitle": "Record Editor - Runtime Ping",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Back to Operations",
+        "href": "#",
+        "line": 117
+      },
+      {
+        "type": "button",
+        "label": "Cancel",
+        "line": 131
+      },
+      {
+        "type": "button",
+        "label": "Save Changes",
+        "line": 135
+      },
+      {
+        "type": "button",
+        "label": "close",
+        "line": 189
+      },
+      {
+        "type": "button",
+        "label": "close",
+        "line": 195
+      },
+      {
+        "type": "button",
+        "label": "Cancel",
+        "line": 214
+      },
+      {
+        "type": "button",
+        "label": "Changes",
+        "line": 217
+      },
+      {
+        "type": "input",
+        "label": "text",
+        "inputType": "text",
+        "line": 150
+      },
+      {
+        "type": "input",
+        "label": "url",
+        "inputType": "url",
+        "line": 161
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 174
+      },
+      {
+        "type": "input",
+        "label": "Add tag...",
+        "inputType": "text",
+        "placeholder": "Add tag...",
+        "line": 201
+      },
+      {
+        "type": "input",
+        "label": "textarea",
+        "inputType": "textarea",
+        "line": 209
+      },
+      {
+        "type": "form",
+        "label": "form",
+        "line": 142
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Back to Operations",
+        "href": "#",
+        "line": 117
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "Cancel",
+        "line": 131
+      },
+      {
+        "type": "button",
+        "label": "Save Changes",
+        "line": 135
+      },
+      {
+        "type": "button",
+        "label": "close",
+        "line": 189
+      },
+      {
+        "type": "button",
+        "label": "close",
+        "line": 195
+      },
+      {
+        "type": "button",
+        "label": "Cancel",
+        "line": 214
+      },
+      {
+        "type": "button",
+        "label": "Changes",
+        "line": 217
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "text",
+        "inputType": "text",
+        "line": 150
+      },
+      {
+        "type": "input",
+        "label": "url",
+        "inputType": "url",
+        "line": 161
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 174
+      },
+      {
+        "type": "input",
+        "label": "Add tag...",
+        "inputType": "text",
+        "placeholder": "Add tag...",
+        "line": 201
+      },
+      {
+        "type": "input",
+        "label": "textarea",
+        "inputType": "textarea",
+        "line": 209
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 13,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "9892da7f9f834c78b7f001fdad1aade4",
+    "screenTitle": "Insights - Runtime Ping",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 119
+      },
+      {
+        "type": "link",
+        "label": "Pipeline",
+        "href": "#",
+        "line": 125
+      },
+      {
+        "type": "link",
+        "label": "insights",
+        "href": "#",
+        "line": 131
+      },
+      {
+        "type": "link",
+        "label": "Documentation",
+        "href": "#",
+        "line": 140
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 146
+      },
+      {
+        "type": "link",
+        "label": "Investigate traces",
+        "href": "#",
+        "line": 197
+      },
+      {
+        "type": "button",
+        "label": "menu",
+        "line": 160
+      },
+      {
+        "type": "button",
+        "label": "Export",
+        "line": 183
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 174
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 119
+      },
+      {
+        "type": "link",
+        "label": "Pipeline",
+        "href": "#",
+        "line": 125
+      },
+      {
+        "type": "link",
+        "label": "insights",
+        "href": "#",
+        "line": 131
+      },
+      {
+        "type": "link",
+        "label": "Documentation",
+        "href": "#",
+        "line": 140
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 146
+      },
+      {
+        "type": "link",
+        "label": "Investigate traces",
+        "href": "#",
+        "line": 197
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "menu",
+        "line": 160
+      },
+      {
+        "type": "button",
+        "label": "Export",
+        "line": 183
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 174
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 9,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "e652d07fdef04b4c8ef2044ca23cdbcc",
+    "screenTitle": "Record Operations - Runtime Ping",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 193
+      },
+      {
+        "type": "link",
+        "label": "Pipeline",
+        "href": "#",
+        "line": 197
+      },
+      {
+        "type": "link",
+        "label": "insights",
+        "href": "#",
+        "line": 201
+      },
+      {
+        "type": "link",
+        "label": "Documentation",
+        "href": "#",
+        "line": 207
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 211
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 170
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 173
+      },
+      {
+        "type": "button",
+        "label": "ACT_RETRY_LOAD",
+        "line": 227
+      },
+      {
+        "type": "button",
+        "label": "Create Record",
+        "line": 231
+      },
+      {
+        "type": "button",
+        "label": "more_vert",
+        "line": 325
+      },
+      {
+        "type": "button",
+        "label": "more_vert",
+        "line": 343
+      },
+      {
+        "type": "button",
+        "label": "more_vert",
+        "line": 361
+      },
+      {
+        "type": "button",
+        "label": "more_vert",
+        "line": 379
+      },
+      {
+        "type": "button",
+        "label": "close",
+        "line": 390
+      },
+      {
+        "type": "button",
+        "label": "edit",
+        "line": 432
+      },
+      {
+        "type": "button",
+        "label": "Shell",
+        "line": 435
+      },
+      {
+        "type": "input",
+        "label": "Search resources...",
+        "inputType": "text",
+        "placeholder": "Search resources...",
+        "line": 166
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 277
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 283
+      },
+      {
+        "type": "input",
+        "label": "Filter...",
+        "inputType": "text",
+        "placeholder": "Filter...",
+        "line": 291
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 300
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 313
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 331
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 349
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 367
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 193
+      },
+      {
+        "type": "link",
+        "label": "Pipeline",
+        "href": "#",
+        "line": 197
+      },
+      {
+        "type": "link",
+        "label": "insights",
+        "href": "#",
+        "line": 201
+      },
+      {
+        "type": "link",
+        "label": "Documentation",
+        "href": "#",
+        "line": 207
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 211
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 170
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 173
+      },
+      {
+        "type": "button",
+        "label": "ACT_RETRY_LOAD",
+        "line": 227
+      },
+      {
+        "type": "button",
+        "label": "Create Record",
+        "line": 231
+      },
+      {
+        "type": "button",
+        "label": "more_vert",
+        "line": 325
+      },
+      {
+        "type": "button",
+        "label": "more_vert",
+        "line": 343
+      },
+      {
+        "type": "button",
+        "label": "more_vert",
+        "line": 361
+      },
+      {
+        "type": "button",
+        "label": "more_vert",
+        "line": 379
+      },
+      {
+        "type": "button",
+        "label": "close",
+        "line": 390
+      },
+      {
+        "type": "button",
+        "label": "edit",
+        "line": 432
+      },
+      {
+        "type": "button",
+        "label": "Shell",
+        "line": 435
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "Search resources...",
+        "inputType": "text",
+        "placeholder": "Search resources...",
+        "line": 166
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 277
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 283
+      },
+      {
+        "type": "input",
+        "label": "Filter...",
+        "inputType": "text",
+        "placeholder": "Filter...",
+        "line": 291
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 300
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 313
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 331
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 349
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 367
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 25,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "25b673fa21f24267bfa7f14376c3c6f9",
+    "screenTitle": "Pipeline Board - Runtime Ping",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 163
+      },
+      {
+        "type": "link",
+        "label": "Pipeline",
+        "href": "#",
+        "line": 167
+      },
+      {
+        "type": "link",
+        "label": "insights",
+        "href": "#",
+        "line": 171
+      },
+      {
+        "type": "link",
+        "label": "Documentation",
+        "href": "#",
+        "line": 177
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 181
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 138
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 141
+      },
+      {
+        "type": "button",
+        "label": "Filter",
+        "line": 199
+      },
+      {
+        "type": "button",
+        "label": "New Record",
+        "line": 203
+      },
+      {
+        "type": "button",
+        "label": "more_horiz",
+        "line": 219
+      },
+      {
+        "type": "button",
+        "label": "more_horiz",
+        "line": 270
+      },
+      {
+        "type": "button",
+        "label": "more_horiz",
+        "line": 304
+      },
+      {
+        "type": "button",
+        "label": "more_horiz",
+        "line": 339
+      },
+      {
+        "type": "input",
+        "label": "Search records, IDs, or owners...",
+        "inputType": "text",
+        "placeholder": "Search records, IDs, or owners...",
+        "line": 133
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 163
+      },
+      {
+        "type": "link",
+        "label": "Pipeline",
+        "href": "#",
+        "line": 167
+      },
+      {
+        "type": "link",
+        "label": "insights",
+        "href": "#",
+        "line": 171
+      },
+      {
+        "type": "link",
+        "label": "Documentation",
+        "href": "#",
+        "line": 177
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 181
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 138
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 141
+      },
+      {
+        "type": "button",
+        "label": "Filter",
+        "line": 199
+      },
+      {
+        "type": "button",
+        "label": "New Record",
+        "line": 203
+      },
+      {
+        "type": "button",
+        "label": "more_horiz",
+        "line": 219
+      },
+      {
+        "type": "button",
+        "label": "more_horiz",
+        "line": 270
+      },
+      {
+        "type": "button",
+        "label": "more_horiz",
+        "line": 304
+      },
+      {
+        "type": "button",
+        "label": "more_horiz",
+        "line": 339
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "Search records, IDs, or owners...",
+        "inputType": "text",
+        "placeholder": "Search records, IDs, or owners...",
+        "line": 133
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 14,
+    "requiresRouter": false,
+    "requiresDragDrop": true
+  }
+]
